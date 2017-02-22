@@ -37,7 +37,7 @@ export class ChallengeListComponent implements OnInit{
     }
 
     onChange(): void{
-        console.log(this.name);
+        console.log(this.name + 'start working now!');
     }
 
     getInfo(): void{
