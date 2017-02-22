@@ -1,0 +1,50 @@
+.challengeBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ch-item{
+    align-items: flex-start;
+    border-radius: 4px;
+    border: 1px solid black;
+    max-width: 300px;
+    margin: 10px;
+    transition: all 0.2s;
+}
+.ch-item:hover{
+    text-decoration: none;
+    box-shadow: 0 3px 10px 0 rgba(33, 30, 28, 0.7)
+}
+.ch-item figure{
+
+}
+.ch-item figure img{
+    max-width: 100%;
+}
+.ch-item figure figcaption{
+    color: #333333;
+    font-size: 24px;
+    text-align: center;
+    margin: 6px 0;
+}
+.ch-state{
+    display: flex;
+    justify-content: space-around;
+    color: black;
+}
+.ch-startDate{
+
+}
+.ch-finishDate{
+
+}
+.ch-failCount{
+    font-size: 14px;
+    line-height: 17px;
+    color: black;
+}
+.ch-difficult{
+    font-size: 16px;
+    line-height: 20px;
+    color: black;
+}

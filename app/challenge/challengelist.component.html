@@ -1,0 +1,24 @@
+<section class="challengeBox">
+    <a href="#" class="ch-item" *ngFor="let challenge of challenges" (click)="getInfo($event)">
+        <figure>
+            <img [src]="challenge.imageUrl" alt=""/>
+            <figcaption>{{ challenge.caption }}</figcaption>
+        </figure>
+        <div class="ch-state">
+            <p class="ch-startDate">{{ challenge.startDate }}</p>
+            <p class="ch-finishDate">{{ challenge.finishDate }}</p>
+        </div>
+        <label>{{ chCaption }}</label>
+        <input [(ngModel)]="name" (change)="onChange()" type="text"/>
+        <h3>Hello {{ name }}</h3>
+        <p class="ch-failCount">Фэйлов допущено: {{ challenge.failCount }}</p>
+        <div>
+            <p class="ch-difficult">Сложность челленджа:</p>
+            <div class="ch-diffBox">
+                <p class="ch-diffDecrease">-</p>
+                <p class="ch-diffValue">{{ challenge.difficultLevel }}</p>
+                <p class="ch-diffIncrease">+</p>
+            </div>
+        </div>
+    </a>
+</section>
