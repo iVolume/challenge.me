@@ -9,15 +9,15 @@
             <p class="ch-finishDate">{{ challenge.finishDate }}</p>
         </div>
         <label>{{ chCaption }}</label>
-        <input [(ngModel)]="name" (change)="onChange()" type="text"/>
+        <input [(ngModel)]="name"  type="text"/>
         <h3>Hello {{ name }}</h3>
         <p class="ch-failCount">Фэйлов допущено: {{ challenge.failCount }}</p>
         <div>
             <p class="ch-difficult">Сложность челленджа:</p>
             <div class="ch-diffBox">
-                <p class="ch-diffDecrease">-</p>
+                <p class="ch-diffDecrease" (click)="change(false)">-</p>
                 <p class="ch-diffValue">{{ challenge.difficultLevel }}</p>
-                <p class="ch-diffIncrease">+</p>
+                <p class="ch-diffIncrease" (click)="change(true)">+</p>
             </div>
         </div>
     </a>

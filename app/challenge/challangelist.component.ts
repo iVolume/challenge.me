@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from "@angular/core";
+import {Component, OnInit, Input, Output, EventEmitter} from "@angular/core";
 import {count} from "rxjs/operator/count";
 
 @Component({
@@ -28,17 +28,16 @@ export class ChallengeListComponent implements OnInit{
 
     name: string = 'iVolume';
 
-    count: number = 0;
-
     @Input() chCaption: string;
+    @Output() onChanged = new EventEmitter<boolean>();
+    change(crease:any): void{
+        this.onChanged.emit(crease);
+    }
 
     ngOnInit(): void{
         console.log('Запустилось!')
     }
 
-    onChange(): void{
-        console.log(this.name + 'start working now!');
-    }
 
     getInfo(): void{
         event.preventDefault();
