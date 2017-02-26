@@ -1,8 +1,8 @@
-import {Component} from "@angular/core";
+import {Component, Output, EventEmitter, Input} from "@angular/core";
 import { IChallenge } from "./challengelist";
 
 @Component({
-    selector: 'challange-list',
+    selector: 'challenge-list',
     templateUrl: './app/challenge/challengelist.component.html',
     styleUrls: ['./app/challenge/challengelist.component.css']
 })
@@ -25,6 +25,14 @@ export class ChallengeListComponent{
             "difficultLevel": 2
         }
     ];
+
+    @Output() seeInsider = new EventEmitter<string>();
+    seeInside(val: string): void {
+        val = val + ' edited by';
+        this.seeInsider.emit(val);
+    }
+
+    @Input() test: string = "Мессадж будет здесь!";
 
 
 

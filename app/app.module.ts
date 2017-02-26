@@ -3,14 +3,14 @@ import { AppComponent }  from './app.component';
 import { ChallengeListComponent } from './challenge/challangelist.component'
 import {FormsModule} from "@angular/forms";
 import {BrowserModule} from "@angular/platform-browser";
-import {ColorDirective} from "./challenge/color.directive";
+import {NewsComponent} from "./news/news.component";
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule
     ],
-    declarations: [ AppComponent, ChallengeListComponent, ColorDirective],
+    declarations: [ AppComponent, ChallengeListComponent, NewsComponent],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }

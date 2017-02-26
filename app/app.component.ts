@@ -1,27 +1,22 @@
-import {Component} from "@angular/core";
+import {Component, Input} from "@angular/core";
 
 @Component({
     selector: 'pm-app',
-    template: `
-        <h1>{{ pageTitle }}</h1>
-        <challange-list></challange-list>
-        
-    `
+    templateUrl: './app/app.component.html'
 })
 export class AppComponent{
+    title: string = 'Вызов брошен..';
+    mainCaption : string;
+    caption: string = 'Из app.component мы!';
+    test: string;
 
-    pageTitle: string = "Список челленджей";
-    mainCaption: string ='Как звать тебя?';
-    helloColor: string = 'blue';
-    randomCaption: string = 'Обо всем';
-    diff: string;
-    difff: number = parseInt(this.diff);
-
-    newsTodayCaption:string = 'Через посредника';
-    newsTodayContent: number = 3;
-
-    onChanged(condition: any[]){
-        condition[0] ? condition[1]++ : condition[1] >1 ? condition[1]-- : condition[1] = condition[1];
-        console.log(condition[1]);
+    maining(caption: string){
+        console.log(caption);
+        this.mainCaption = caption;
     }
+
+    seeInside(num:string): void {
+        this.test = num + ' от главного.';
+    }
+
 }
