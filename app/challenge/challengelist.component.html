@@ -1,5 +1,5 @@
 <section class="challengeBox">
-    <a href="#" class="ch-item" *ngFor="let challenge of challenges" (click)="getInfo($event)">
+    <a href="#" class="ch-item" *ngFor="let challenge of challenges">
         <figure>
             <img [src]="challenge.imageUrl" alt=""/>
             <figcaption>{{ challenge.caption }}</figcaption>
@@ -8,16 +8,14 @@
             <p class="ch-startDate">{{ challenge.startDate }}</p>
             <p class="ch-finishDate">{{ challenge.finishDate }}</p>
         </div>
-        <label>{{ chCaption }}</label>
-        <input [(ngModel)]="name"  type="text"/>
         <h3>Hello {{ name }}</h3>
         <p class="ch-failCount">Фэйлов допущено: {{ challenge.failCount }}</p>
         <div>
             <p class="ch-difficult">Сложность челленджа:</p>
             <div class="ch-diffBox">
-                <p class="ch-diffDecrease" (click)="change(false)">-</p>
-                <p class="ch-diffValue">{{ challenge.difficultLevel }}</p>
-                <p class="ch-diffIncrease" (click)="change(true)">+</p>
+                <p class="ch-diffDecrease">-</p>
+                <label><input class="ch-diffValue"/></label>
+                <p class="ch-diffIncrease">+</p>
             </div>
         </div>
     </a>
